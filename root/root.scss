@@ -1,0 +1,114 @@
+:root {
+  --explorer-font-size: 14px;
+  --nestlinesize1: solid;
+  --nestlinestyle1: 2px;
+  --nestlinesize2: groove;
+  --nestlinestyle2: 2px;
+  --nestlinesize3: dashed;
+  --nestlinestyle3: 2px;
+  --FolderRadius: 5px;
+  --file-type-tag: initial;
+  --vault-name: initial;
+}
+
+.theme-dark {
+  --default-fg: #ffffff;
+  --default-bg: #333333;
+  --dragged-color: #8e939349;
+}
+
+.theme-light {
+  --default-fg: #000000;
+  --default-bg: #ffffff;
+  --dragged-color: #8e939349;
+}
+
+.nav-file-title,
+.nav-folder-title {
+  color: var(--default-fg);
+  font-size: var(--explorer-font-size) !important;
+  border-radius: 0;
+
+  &.is-being-dragged {
+    background-color: var(--dragged-color) !important;
+  }
+
+  &:hover {
+    border-radius: 5px;
+  }
+}
+
+.workspace-leaf.mod-active .tree-item-self.has-focus {
+  box-shadow: none;
+}
+
+body {
+  &:not(.is-grabbing) {
+    .nav-folder-title:hover {
+      border-radius: 0;
+
+      .nav-folder-collapse-indicator {
+        background-color: transparent !important;
+      }
+    }
+  }
+}
+
+.CodeMirror-foldgutter-folded,
+.is-collapsed .nav-folder-collapse-indicator,
+.nav-folder-collapse-indicator,
+.nav-folder-collapse-indicator.collapse-icon svg.right-triangle {
+  color: currentColor !important;
+}
+
+.nav-file-tag {
+  display: var(--file-type-tag);
+  top: -1px;
+}
+
+.nav-folder-title[data-path^="/"] {
+  display: var(--vault-name);
+}
+
+.nav-files-container {
+  margin: 0 5px;
+
+  &.node-insert-event {
+    > div > .tree-item.nav-folder {
+      > .tree-item-self.nav-folder-title {
+        margin-top: 5px !important;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.relation-active {
+  .nav-folder:not(.mod-root) > .nav-folder-children .nav-file-title {
+    margin-left: -5px;
+  }
+}
+
+.nav-folder {
+  &.mod-root {
+    > .nav-folder-children > .nav-folder {
+      > .nav-folder-title {
+        font-family: var(--font-interface);
+        font-size: calc(var(--explorer-font-size) + 3px) !important;
+        padding-left: 5px;
+        margin-top: 7px;
+        border-radius: var(--FolderRadius) var(--FolderRadius) 0 0;
+      }
+
+      &.is-collapsed > .nav-folder-title {
+        border-radius: var(--FolderRadius);
+      }
+
+      .nav-folder-children {
+        padding-left: 0;
+        border-top: var(--default-fg) 1px solid;
+        border-radius: 0 0 var(--FolderRadius) var(--FolderRadius);
+      }
+    }
+  }
+}

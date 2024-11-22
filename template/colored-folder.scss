@@ -1,0 +1,33 @@
+// Styles dynamiques pour un dossier spécifique
+.nav-folder-title[data-path^="{{FOLDER}}"],
+.nav-file-title[data-path^="{{FOLDER}}"] {
+  color: var(--fg-{{FOLDER_NUMBER}});
+}
+
+.nav-files-container.node-insert-event {
+  > div > .tree-item.nav-folder > .tree-item-self.nav-folder-title[data-path="{{FOLDER}}"] {
+    border-bottom: 1px solid var(--bg-{{FOLDER_NUMBER}});
+  }
+}
+
+.nav-folder:has([data-path^="{{FOLDER}}"]),
+.nav-file:has([data-path^="{{FOLDER}}"]) {
+  --nestlinecolor1: var(--fg-{{FOLDER_NUMBER}}) !important;
+  --nestlinecolor2: var(--fg-{{FOLDER_NUMBER}}) !important;
+  --nestlinecolor3: var(--fg-{{FOLDER_NUMBER}}) !important;
+}
+
+.tree-item-self.is-clickable.mod-collapsible.nav-folder-title[data-path="{{FOLDER}}"],
+.nav-folder-title[data-path="{{FOLDER}}"] + * {
+  background-color: var(--bg-{{FOLDER_NUMBER}});
+  border-radius: var(--FolderRadius);
+}
+
+.nav-folder-title[data-path^="{{FOLDER}}"]:hover,
+.nav-file-title[data-path^="{{FOLDER}}"]:hover,
+.nav-folder-title[class*="is-active"][data-path^="{{FOLDER}}"],
+.nav-file-title[class*="is-active"][data-path^="{{FOLDER}}"] {
+  color: var(--fg-{{FOLDER_NUMBER}});
+  background-color: var(--bg-{{FOLDER_NUMBER}});
+  filter: saturate(150%);
+}

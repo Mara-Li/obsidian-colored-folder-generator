@@ -1,0 +1,55 @@
+/* @settings
+name: Nested Folders - Colored
+id: nested
+settings:
+    -
+      title: Explorer settings
+      type: heading
+      level: 2
+    -
+        id: file-type-tag
+        type: variable-select
+        title: "Display the file type tag, as JPEG...",
+        default: initial
+        options:
+            - initial
+            - none
+    -
+        id: vault-name
+        type: variable-select
+        title: "Display the vault name",
+        default: initial
+        options:
+            - initial
+            - none
+    -
+        id: folderRadius
+        type: variable-number
+        format: px
+        default: 5
+        title: Folder Radius
+    -
+        id: explorer-font-size
+        title: Augment explorer font size
+        type: variable-number
+        format: px
+        default: 14
+        max: 30
+        min: 12
+    -
+        type: heading
+        level: 2
+        collapsed: true
+        title: Default folder color
+    -
+        id: default-fg
+        type: color
+        default-light: "#26272b"
+        default-dark: "#ffffff"
+        title: Foreground
+    -
+        id: default-bg
+        type: color
+        default-light: "#f0f0f0"
+        default-dark: "#333333"
+        title: Background

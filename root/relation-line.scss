@@ -1,0 +1,83 @@
+@media only screen and (max-device-width: 1080px) {
+  .relation-active {
+    .nav-files-container.node-insert-event {
+      &.show-unsupported > div > .tree-item.nav-folder {
+        .tree-item-children.nav-folder-children {
+          .tree-item.nav-folder {
+            .tree-item-children.nav-folder-children {
+              .tree-item {
+                &.nav-file,
+                &.nav-folder {
+                  border-left: var(--nestlinestyle1) var(--nestlinesize1) var(--nestlinecolor1);
+                  margin-left: 1em;
+                }
+
+                &.nav-folder > .tree-item-children.nav-folder-children {
+                  .tree-item {
+                    &.nav-file,
+                    &.nav-folder {
+                      border-left: var(--nestlinestyle2) var(--nestlinesize2) var(--nestlinecolor2);
+                      margin-left: var(--adjust-mobile);
+                    }
+
+                    &.nav-folder > .tree-item-children.nav-folder-children {
+                      .tree-item {
+                        &.nav-file,
+                        &.nav-folder {
+                          border-left: var(--nestlinestyle3) var(--nestlinesize3) var(--nestlinecolor3);
+                          margin-left: var(--adjust-mobile);
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-device-width: 1024px) {
+  .relation-active {
+    .nav-files-container.node-insert-event {
+      &.show-unsupported > div > .tree-item.nav-folder {
+        .tree-item-children.nav-folder-children {
+          .tree-item.nav-folder {
+            .tree-item-children.nav-folder-children {
+              .tree-item {
+                &.nav-file,
+                &.nav-folder {
+                  border-left: var(--nestlinestyle1) var(--nestlinesize1) var(--nestlinecolor1);
+                  margin-left: var(--adjust-pc);
+                }
+
+                &.nav-folder > .tree-item-children.nav-folder-children {
+                  .tree-item {
+                    &.nav-file,
+                    &.nav-folder {
+                      border-left: var(--nestlinestyle2) var(--nestlinesize2) var(--nestlinecolor2);
+                      margin-left: var(--adjust-pc);
+                    }
+
+                    &.nav-folder > .tree-item-children.nav-folder-children {
+                      .tree-item {
+                        &.nav-file,
+                        &.nav-folder {
+                          border-left: var(--nestlinestyle3) var(--nestlinesize3) var(--nestlinecolor3);
+                          margin-left: var(--adjust-pc);
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

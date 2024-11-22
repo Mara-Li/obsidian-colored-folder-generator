@@ -1,0 +1,138 @@
+/* @settings
+name: Nested Folder — Relations Line
+id: relation-line
+settings:
+    -
+        id: relation-active
+        type: class-toggle
+        title: Relation Line
+        description: Active the relation line
+    -
+        id: adjust-line
+        format: heading
+        collapsed: true
+        title: Adjust Line
+        level: 3
+    -
+        id: adjust-pc
+        format: em
+        title: Line PC
+        description: Adjust line with icon (in em) (ON PC)
+        default: 1.2
+        type: variable-number
+    -
+        id: adjust-mobile
+        format: em
+        title: Line MOBILE
+        description: Adjust line with icon (in em) (ON MOBILE)
+        default: 0.8
+        type: variable-number
+    -
+        id: line-color
+        type: heading
+        level: 2
+        collapsed: true
+        title: Border Color
+    -
+        id: nestlinecolor1
+        title: Level 1
+        type: variable-themed-color
+        format: hex
+        opacity: true
+        default-light: "#ffffff44"
+        default-dark: "#00000025"
+    -
+        id: nestlinecolor2
+        title: Level 2
+        type: variable-themed-color
+        format: hex
+        opacity: true
+        default-light: "#ffffff44"
+        default-dark: "#00000025"
+    -
+        id: nestlinecolor3
+        title: Level 3
+        type: variable-themed-color
+        format: hex
+        opacity: true
+        default-light: "#ffffff44"
+        default-dark: "#00000025"
+    -
+        id: nested-type
+        type: heading
+        level: 2
+        collapsed: true
+        title: Border Style
+    -
+        id: nestlinesize1
+        title: Level 1
+        type: variable-select
+        default: solid
+        options:
+            - none
+            - hidden
+            - inset
+            - outset
+            - dotted
+            - dashed
+            - solid
+            - double
+            - groove
+            - ridge
+    -
+        id: nestlinesize2
+        title: Level 2
+        type: variable-select
+        default: groove
+        options:
+            - none
+            - hidden
+            - inset
+            - outset
+            - dotted
+            - dashed
+            - solid
+            - double
+            - groove
+            - ridge
+    -
+        id: nestlinesize3
+        title: Level 3
+        type: variable-select
+        default: dashed
+        options:
+            - none
+            - hidden
+            - inset
+            - outset
+            - dotted
+            - dashed
+            - solid
+            - double
+            - groove
+            - ridge
+    -
+        id: border-size
+        type: heading
+        level: 2
+        collapsed: true
+        title: Border Size
+    -
+        id: nestlinestyle1
+        type: variable-number
+        title: Level 1
+        default: 2
+        format: px
+    -
+        id: nestlinestyle2
+        type: variable-number
+        title: Level 2
+        default: 2
+        format: px
+    -
+        id: nestlinestyle3
+        type: variable-number
+        title: Level 3
+        default: 2
+        format: px
+*/

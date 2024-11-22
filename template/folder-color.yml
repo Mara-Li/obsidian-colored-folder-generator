@@ -1,0 +1,23 @@
+    -
+        type: heading
+        level: 3
+        collapsed: true
+        title: {{FOLDER_NAME}}
+    -
+        id: fg-{{FOLDER_NUMBER}}
+        type: color
+        title: Foreground
+        type: variable-themed-color
+        default-light: "#001219"
+        default-dark: "#8d8d8d"
+        format: hex
+        opacity: false
+    -
+        id: bg-{{FOLDER_NUMBER}}
+        type: color
+        title: Background
+        type: variable-themed-color
+        format: hex
+        opacity: true
+        default-light: "#3131312c"
+        default-dark: "#6e6e6e2c"
